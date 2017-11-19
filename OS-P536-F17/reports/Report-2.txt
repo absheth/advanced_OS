@@ -1,0 +1,11 @@
+Q. What are 2 things that you learned from this assignment?
+A: 	1.	Practical implementation of process synchronization.
+	2.	Process creation and interprocess communication using polling and message passing along with semaphore concepts.
+
+
+Q. What are 2 mistakes that you made in this assignment, and how did you discover and fix these mistakes?
+A:  1. Initially, I did not make the parent process wait till the time child processes ended due to which parent process ended and the child processes turned to orphan processes. I discovered this while printing the time(at the end). So I made the parent process wait till all the elements were printed (till 0). Once the last element was printed, parent process was intimated that the consume element is '0' so it can now complete it's execution and end.
+	2. While sharing the array between multiple processes, I was sharing the local array instead of global array because of which the next process was not getting the element even when the element was updated in the array(local). So I searched over the internet and found a solution from on stackoverflow.com. Also my friend, Ameya explained me how the resource is being shared among the processes.
+
+Q. If you were restarting this assignment, what would you change about how you went about completing this assignment?
+A: I would read thoroughly about the topic first, get my concepts cleared and then start with the assignment.
